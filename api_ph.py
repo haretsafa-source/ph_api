@@ -18,15 +18,16 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+# =========================
+# API KEY
+# =========================
+API_KEY = "ChangeThisKey123"
 # routes
 @app.post("/analyse")
 async def analyse():
     return {"message": "ok"}
 
-# =========================
-# API KEY
-# =========================
-API_KEY = "ChangeThisKey123"
+
 
 # =========================
 # Request Model

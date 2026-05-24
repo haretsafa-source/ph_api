@@ -23,6 +23,10 @@ app.add_middleware(
 async def analyse():
     return {"message": "ok"}
 
+# =========================
+# API KEY
+# =========================
+API_KEY = "ChangeThisKey123"
 
 # =========================
 # Request Model

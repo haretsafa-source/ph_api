@@ -50,7 +50,7 @@ def analyse(
     # Example Physics/Chemistry Logic
     # =========================
     h_concentration = 10 ** (-ph)
-    concentration = h_concentration * volume
+    number_of_moles = h_concentration * volume
 
     # =========================
     # Create Graph
@@ -62,7 +62,7 @@ def analyse(
     plt.plot(x, y)
     plt.title("pH Curve")
     plt.xlabel("pH")
-    plt.ylabel("[H+]")
+    plt.ylabel("C[H+]")
 
     buf = io.BytesIO()
     plt.savefig(buf, format='png')
@@ -76,7 +76,7 @@ def analyse(
     # =========================
     return {
         "type": "acid" if ph < 7 else "basic",
-        "concentration": concentration,
+        "number_of_moles": number_of_moles,
         "h_concentration": h_concentration,
         "graph": img_base64
     }
